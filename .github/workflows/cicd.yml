@@ -55,8 +55,8 @@ jobs:
     - name: SonarQube Scan
       uses: SonarSource/sonarqube-scan-action@v4.2.0 # Ex: v4.1.0 or sha1, See the latest version at https://github.com/marketplace/actions/official-sonarqube-scan
       env:
-        #SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_TOKEN: squ_c35a05dcea11c40516ccd124d0184fd9e156c698
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        #SONAR_TOKEN: squ_c35a05dcea11c40516ccd124d0184fd9e156c698
         SONAR_HOST_URL: http://192.168.56.102:9000
 
 # Check the Quality Gate status.
@@ -66,7 +66,7 @@ jobs:
       with:
           pollingTimeoutSec: 600
       env:
-          #SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_TOKEN: squ_c35a05dcea11c40516ccd124d0184fd9e156c698
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          #SONAR_TOKEN: squ_c35a05dcea11c40516ccd124d0184fd9e156c698
           SONAR_HOST_URL: http://192.168.56.102:9000 #OPTIONAL
         
